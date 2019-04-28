@@ -1,0 +1,17 @@
+IF
+NumTimesTalkedTo(0)
+Detect([PC])
+!Allegiance(Myself,ENEMY)
+THEN
+RESPONSE #100
+StartDialogueNoSet(LastSeenBy(Myself))
+END
+ 
+IF
+Global("HG_EhlaJoin","GLOBAL",0)
+InParty(Myself)
+THEN
+RESPONSE #100
+SetGlobal("HG_EhlaJoin","GLOBAL",1)
+SetName(@001)
+END
