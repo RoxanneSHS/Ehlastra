@@ -54,7 +54,9 @@ END
 
 CHAIN
 IF~~THEN EhlastJ HasChanged2
-~Get your mouth shut and your feet moving. Deeds not words, <CHARNAME>.~EXIT
+~Get your mouth shut and your feet moving. Deeds not words, <CHARNAME>.~
+=~(There is a wicked grin visible for a second.) Now that I am my own master again I can change into that shape at will once a day. We can use this when needed.~
+EXIT
 
 INTERJECT HGNYA01 1  HG_FaceNyale1
 ==HGNYA01 IF~InParty("HGSLV01")~THEN~(A bony finger points at Ehlastra.) You go back to be pet for my boy, silly, you not be here with the other bhaalchild.~

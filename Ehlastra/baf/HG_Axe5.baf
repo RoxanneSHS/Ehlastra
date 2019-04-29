@@ -1,0 +1,12 @@
+IF
+HPPercentLT(Myself,100)
+HasItemEquipedReal("hg_axe","Hgslv01")
+OR(2)
+HitBy("Hgslv01",SLASHING)
+HitBy("Hgslv01",MISSILE)
+THEN
+RESPONSE #100
+ApplyDamage(Myself,30,COLD)
+Wait(2)
+ApplyDamage(Myself,30,ACID)
+END

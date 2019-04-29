@@ -47,5 +47,15 @@ COPY ~Ehlastra/Misc//HG_Chan.SPL~ ~override~
      SAY 0xc  @009
      SAY 0x8  @009
      SAY 0x50 @010
-     
+
 EXTEND_TOP ~ar5204.bcs~ ~Ehlastra/baf/HG_5204.baf~
+EXTEND_TOP ~yaga01.bcs~ ~Ehlastra/baf/HG_Axe5.baf~
+EXTEND_TOP ~finmel01.bcs~ ~Ehlastra/baf/HG_Axe5.baf~
+EXTEND_TOP ~abaz2.bcs~ ~Ehlastra/baf/HG_Axe5.baf~
+EXTEND_TOP ~sendai.bcs~ ~Ehlastra/baf/HG_Axe5.baf~
+EXTEND_TOP ~finyaga.bcs~ ~Ehlastra/baf/HG_Axe5.baf~
+EXTEND_TOP ~finabaz.bcs~ ~Ehlastra/baf/HG_Axe5.baf~
+EXTEND_TOP ~finbodh.bcs~ ~Ehlastra/baf/HG_Axe5.baf~
+EXTEND_TOP ~fingrom.bcs~ ~Ehlastra/baf/HG_Axe5.baf~
+EXTEND_TOP ~finiren.bcs~ ~Ehlastra/baf/HG_Axe5.baf~
+EXTEND_TOP ~finsend.bcs~ ~Ehlastra/baf/HG_Axe5.baf~
