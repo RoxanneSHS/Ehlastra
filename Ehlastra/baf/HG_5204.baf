@@ -1,0 +1,8 @@
+IF
+Global("AxInChest","ar5204",0)
+THEN
+RESPONSE #100
+SetGlobal("AxInChest","ar5204",1)
+ActionOverride("Container 3",CreateItem("HG_Axe",0,0,0))
+Continue()
+END

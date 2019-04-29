@@ -33,3 +33,14 @@ UNLESS ~HGSLV01~
 
 STRING_SET
 65990 @003
+66041 @004
+
+COPY ~Ehlastra/Misc/HG_Axe.itm~ ~override~
+SAY NAME1 @006
+SAY NAME2 @007
+SAY DESC @008
+SAY 0x2be Ehlastra
+
+COPY ~Ehlastra/Misc/HG_Axe.bam~ ~override~
+
+EXTEND_TOP ~ar5204.bcs~ ~Ehlastra/baf/HG_5204.baf~

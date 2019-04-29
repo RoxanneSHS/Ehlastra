@@ -15,3 +15,22 @@ RESPONSE #100
 SetGlobal("HG_EhlaJoin","GLOBAL",1)
 SetName(@001)
 END
+
+IF
+Global("HG_isGiantess","Global",1)
+THEN
+RESPONSE #100
+SetGlobal("HG_isGiantess","Global",2)
+RealSetGlobalTimer("HG_backnormal","Locals",90)
+Wait(1)
+Polymorph(GIANT_FIRE)
+END
+
+IF
+Global("HG_isGiantess","Global",2)
+RealGlobalTimerExpired("HG_backnormal","Locals")
+THEN
+RESPONSE #100
+SetGlobal("HG_isGiantess","Global",0)
+Polymorph(FIGHTER_FEMALE_HUMAN)
+END
