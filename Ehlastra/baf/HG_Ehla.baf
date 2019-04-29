@@ -17,21 +17,21 @@ SetName(@001)
 END
 
 IF
-Global("HG_isGiantess","Global",1)
+Global("HG_isGia","Global",1)
 THEN
 RESPONSE #100
-SetGlobal("HG_isGiantess","Global",2)
+SetGlobal("HG_isGia","Global",2)
 RealSetGlobalTimer("HG_backnormal","Locals",90)
 Wait(1)
 Polymorph(GIANT_FIRE)
 END
 
 IF
-Global("HG_isGiantess","Global",2)
+Global("HG_isGia","Global",2)
 RealGlobalTimerExpired("HG_backnormal","Locals")
 THEN
 RESPONSE #100
-SetGlobal("HG_isGiantess","Global",0)
+SetGlobal("HG_isGia","Global",0)
 Polymorph(FIGHTER_FEMALE_HUMAN)
 END
 
@@ -67,9 +67,24 @@ SetGlobal("AxeNotback","Locals",3)
 END
 
 IF
+Global("GiantCanChange","Locals",0)
 OR(2)
+Global("HG_FaceNyale1","Global",1)
+Global("HG_FaceNyale2","Global",1)
+OR(2)
+Dead("HGNYA01")
+!See("HGNYA01")
+THEN
+RESPONSE #100
+SetGlobal("GiantCanChange","Locals",1)
+AddSpecialAbility("hg_chan")
+END
+
+IF
+OR(3)
 Global("AxeIsback","Locals",1)
 Global("AxeNotback","Locals",1)
+Global("GiantCanChange","Locals",1)
 InParty(Myself)
 !See([ENEMY])
 See(Player1)

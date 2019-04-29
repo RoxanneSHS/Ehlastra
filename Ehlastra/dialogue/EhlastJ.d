@@ -42,3 +42,28 @@ IF~~THEN EhlastJ HaveNoaxe2
 CHAIN
 IF~~THEN EhlastJ HaveNoaxe3
 ~I am worth little without my axe. Legions have fallen to my slasher and many will fall to it still. You are a useless leader not to see such simple facts. I will go and search it.~DO~LeaveParty() EscapeAreaMove("ar5204",1555,1501,10)~EXIT
+
+CHAIN
+IF~Global("GiantCanChange","Locals",1)~THEN EhlastJ HasChanged1
+~You have witnessed what the crazy witch has done to me. Yes, this is her use of the eldest and blackest foul magic on me. It makes me become a perversion like her stupid boy, a fire giantess for his mating.~
+DO~SetGlobal("GiantCanChange","Locals",2)~
+=~Yes, you must have wondered already how I could have served his lust as a concubine...now you know.~
+END
+++~You will...we will use this strength against them, Ehlastra, you will have your revenge, trust me.~+ HasChanged2
+++~A nice idea but it back fires. The strength you can gain and the weapon you use will make Yaga-Shura tremble.~+ HasChanged2
+
+CHAIN
+IF~~THEN EhlastJ HasChanged2
+~Get your mouth shut and your feet moving. Deeds not words, <CHARNAME>.~EXIT
+
+INTERJECT HGNYA01 1  HG_FaceNyale1
+==HGNYA01 IF~InParty("HGSLV01")~THEN~(A bony finger points at Ehlastra.) You go back to be pet for my boy, silly, you not be here with the other bhaalchild.~
+==EhlastJ IF~InParty("HGSLV01")~THEN~You have any reason to fear me, Nyalee, Witch of the Glade. But I am free of the chains and I will use the dark power you worked on me against you and your boy now.~ DO~ReallyForceSpellRES("HG_CHAN","HGSLV01")~
+==HGNYA01 IF~InParty("HGSLV01")~THEN~Listen not to her, powerful one.~
+END HGNYA01 3
+
+I_C_T2  HGNYA01 25 HG_FaceNyale2
+==HGNYA01 IF~InParty("HGSLV01")Global("HG_FaceNyale1","Global",0)~THEN~(A bony finger points at Ehlastra.) You go back to be pet for my boy, silly, you not be here with the other bhaalchild.~
+==EhlastJ IF~InParty("HGSLV01")Global("HG_FaceNyale1","Global",0)~THEN~You have any reason to fear me, Nyalee, Witch of the Glade. But I am free of the chains and I will use the dark power you worked on me against you and your boy now.~ DO~ReallyForceSpellRES("HG_CHAN","HGSLV01")~
+==HGNYA01 IF~InParty("HGSLV01")Global("HG_FaceNyale1","Global",0)~THEN~Listen not to her, powerful one.~
+END

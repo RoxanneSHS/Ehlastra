@@ -43,4 +43,9 @@ SAY 0x2be Ehlastra
 
 COPY ~Ehlastra/Misc/HG_Axe.bam~ ~override~
 
+COPY ~Ehlastra/Misc//HG_Chan.SPL~ ~override~
+     SAY 0xc  @009
+     SAY 0x8  @009
+     SAY 0x50 @010
+     
 EXTEND_TOP ~ar5204.bcs~ ~Ehlastra/baf/HG_5204.baf~
