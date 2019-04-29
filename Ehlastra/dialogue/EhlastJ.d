@@ -47,7 +47,7 @@ CHAIN
 IF~Global("GiantCanChange","Locals",1)~THEN EhlastJ HasChanged1
 ~You have witnessed what the crazy witch has done to me. Yes, this is her use of the eldest and blackest foul magic on me. It makes me become a perversion like her stupid boy, a fire giantess for his mating.~
 DO~SetGlobal("GiantCanChange","Locals",2)~
-=~Yes, you must have wondered already how I could have served his lust as a concubine...now you know.~
+=~Ha, you must have wondered already how I could have served his lust as a concubine...now you know.~
 END
 ++~You will...we will use this strength against them, Ehlastra, you will have your revenge, trust me.~+ HasChanged2
 ++~A nice idea but it back fires. The strength you can gain and the weapon you use will make Yaga-Shura tremble.~+ HasChanged2
@@ -59,7 +59,7 @@ IF~~THEN EhlastJ HasChanged2
 EXIT
 
 INTERJECT HGNYA01 1  HG_FaceNyale1
-==HGNYA01 IF~InParty("HGSLV01")~THEN~(A bony finger points at Ehlastra.) You go back to be pet for my boy, silly, you not be here with the other bhaalchild.~
+==HGNYA01 IF~InParty("HGSLV01")~THEN~(A bony finger points at Ehlastra.) You go back to be pet for my boy, silly, you not be here with the other bhaalchild.~DO~SetGlobal("TalkedToNyalee","GLOBAL",1)~
 ==EhlastJ IF~InParty("HGSLV01")~THEN~You have any reason to fear me, Nyalee, Witch of the Glade. But I am free of the chains and I will use the dark power you worked on me against you and your boy now.~ DO~ReallyForceSpellRES("HG_CHAN","HGSLV01")~
 ==HGNYA01 IF~InParty("HGSLV01")~THEN~Listen not to her, powerful one.~
 END HGNYA01 3
