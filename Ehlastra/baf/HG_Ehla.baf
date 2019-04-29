@@ -34,3 +34,49 @@ RESPONSE #100
 SetGlobal("HG_isGiantess","Global",0)
 Polymorph(FIGHTER_FEMALE_HUMAN)
 END
+
+IF
+PartyHasItem("HG_Axe")
+AreaCheck("ar5204")
+Global("AxeIsback","Locals",0)
+Delay(60)
+THEN
+RESPONSE #100
+SetGlobal("AxeIsback","Locals",1)
+TakePartyItem("HG_Axe")
+END
+
+IF
+!PartyHasItem("HG_Axe")
+!AreaCheck("ar5204")
+Global("AxeIsback","Locals",0)
+Global("AxeNotback","Locals",0)
+Delay(30)
+THEN
+RESPONSE #100
+SetGlobal("AxeNotback","Locals",1)
+END
+
+IF
+Global("AxeNotback","Locals",2)
+InParty(Myself)
+AreaCheck("ar5204")
+THEN
+RESPONSE #100
+SetGlobal("AxeNotback","Locals",3)
+END
+
+IF
+OR(2)
+Global("AxeIsback","Locals",1)
+Global("AxeNotback","Locals",1)
+InParty(Myself)
+!See([ENEMY])
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID)
+CombatCounter(0)
+THEN
+RESPONSE #100
+MoveToObject(Player1)
+StartDialogNoSet("EhlastJ")
+END

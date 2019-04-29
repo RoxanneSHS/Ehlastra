@@ -21,7 +21,7 @@ SAY BIO @005
 
 COMPILE ~Ehlastra/baf/HG_Ehla.baf~
 
-COMPILE ~Ehlastra/dialogue/Ehlajoin.d~
+COMPILE ~Ehlastra/dialogue~
 
 APPEND ~pdialog.2da~
 ~HGSLV01 *** *** *** EhlastP EhlastJ EhlastD~
