@@ -93,7 +93,7 @@ IF~~THEN EhlastJ Northpast2
 
 CHAIN
 IF~~THEN EhlastJ Northpast3
-~My tribe and its neighbour had been at war in my homeland near River Delimbyir for many years. I grew up with those battles and I was one of the herioines of our side aside from being the chieftain's daughter. It was a bloody and satisfying time but the elders grew tired - or wiser as they phrased it.~
+~My tribe and its neighbour had been at war in my homeland near River Delimbyir for many years. I grew up with those battles and I was one of the heroines of our side aside from being the chieftain's daughter. It was a bloody and satisfying time but the elders grew tired - or wiser as they phrased it.~
 =~Peace treaties were negotiated and one of those weak elders' wonderful ideas was that the contracts be sealed by a marriage between the one chieftain's son with the other one's daughter.~
 END
 ++~I think I see where that leads us.~ + Northpast4
@@ -102,7 +102,7 @@ END
 
 CHAIN
 IF~~THEN EhlastJ Northpast4
-~I had once almost killed Bryon in a battle once but his henchmen sheltered him with their shields and could carry the wounded chieftain's son from the field and away from my final blow. I would not become the docile wife of a man I had bettered on the battlefield.~
+~I had once almost killed Bryon in a battle but his henchmen sheltered him with their shields and could carry the wounded chieftain's son from the field and away from my final blow. I would not become the docile wife of a man I had bettered on the battlefield.~
 END
 ++~Sometimes the pride of one counts less than the life of many.~ + Northpast5
 ++~Did they ask your opinion on the case - or his?~ + Northpast5
@@ -114,6 +114,51 @@ CHAIN
 IF~~THEN EhlastJ Northpast5
 ~Senile old men have no right to determine the lives of the young. They did not even dare to ask us. I bet he would not have wanted me any bit more than I did not want him.~
 =~This was just a silly gesture, a symbol without meaning. What did it mean for peace that we two should waste our lives for it. If the peace were broken, which would have been my side then? And even in peace time, how would I live among that tribe of which I had killed so many with my own weapons?~
+=~Enough for now. We may talk about my past another time again.~EXIT
+
+CHAIN
+IF~ Global("TalkofPast","Locals",3)~ THEN EhlastJ Northpast21
+~You may want to hear more of my journey. Or maybe not?~
+DO~SetGlobal("TalkofPast","Locals",4) RealSetGlobalTimer("TalkofPastT","Locals",3200)~
+END
+++~It's always good to know who are the ones you travel with.~ + Northpast22
+++~I heard enough to know the rest. No need to hear more~ + Northpast2
+++~You came to the point where a forced marriage was waiting for you. Obviously I didn't happen that way?~ + Northpast22
+
+CHAIN
+IF~~THEN EhlastJ Northpast22
+~I confronted my father with my rejection and he tried to convince me that all was Tempus' will. I laughed at that farce because Tempus always prefers the able fighter to cooking housewife. It made no sense to fight with my father. I did not want war with my tribe. A fighter must know when a battle cannot be won. I left my village that night.~
+=~The elders sent my older brother and Bryon on my trail to bring me back. They caught up with me at Loudwater, twenty men were with them. We did not fight, they knew that they would not win without paying a price nobody was willing to pay.~
+END
+++~I underestimated the intelligence of your northern people. They did well to let you go.~+ Northpast23
+IF~Gender(Player1,FEMALE)~THEN REPLY~Typical males, they can't stomach a strong woman.~+ Northpast23
+++~Would you really have killed your brother and brethren just to live a life away from everything you knew?~+ Northpast23
+
+CHAIN
+IF~~THEN EhlastJ Northpast23
+~(She ignores your interjection.) I came to the Sword Coast and learned bits and peaces about the bhaalspawn story. And one day in the vicinity of Boareskyr Bridge and the Winding Water I met one of them near a former Bhaal temple which the Cyricists had taken over.~
+END
+IF~!InParty("Sarevok")~THEN REPLY~I bet I know who that was.~+ Northpast24
+IF~InParty("Sarevok")~THEN REPLY~I bet I know who that was.~EXTERN Sarev25J Northpast25
+
+
+CHAIN
+IF~~THEN EhlastJ Northpast24
+~Sarevok. You knew him?~
+END
+++~I killed him. Good for you that you were not with his entourage.~ + Northpast26
+
+CHAIN
+IF~~THEN Sarev25J Northpast25
+~Yes, it was me. We were already under pressure then and did not trust a new face. Winski and Tamoko warned me. <CHARNAME> had already crossed my plans several times.~
+==EhlastJ~I learned about <CHARNAME> afterwards when <PRO_HESHE> had become the saviour of Baldur's Gate. But I had reached Tethir already by then.~
+==Sarev25J~A fighter like Ehlastra by our side might have made the difference between you and me back then, <CHARNAME>.~
+==EhlastJ~It may make the difference against the Five now, Sarevok.~
+=~Enough for now. We may talk about my past another time again.~EXIT
+
+CHAIN
+IF~~THEN EhlastJ Northpast26
+~His advisors did not trust me, a mage named Winski and a priestess Tamoko. Sarevok was nervous because someone he called Gorion's Ward had crossed his plans several times.~
 =~Enough for now. We may talk about my past another time again.~EXIT
 
 
