@@ -89,7 +89,7 @@ END
 
 CHAIN
 IF~~THEN EhlastJ Northpast2
-~Your loss, <PRO_GIRLBOY>. (You can see by her face expression that you will hear nothing about the subject again.)~EXIT
+~Your loss, <PRO_GIRLBOY>. (You can see by her face expression that you will hear nothing about the subject again.)~DO~SetGlobal("TalkofPast","Locals",49)~EXIT
 
 CHAIN
 IF~~THEN EhlastJ Northpast3
@@ -102,10 +102,10 @@ END
 
 CHAIN
 IF~~THEN EhlastJ Northpast4
-~I had once almost killed Bryon in a battle but his henchmen could carry the wounded chieftain's son from the battle and away from my final blow. I would not become the docile wife of a man I had bettered on the battlefield.~
+~I had once almost killed Bryon in a battle once but his henchmen sheltered him with their shields and could carry the wounded chieftain's son from the field and away from my final blow. I would not become the docile wife of a man I had bettered on the battlefield.~
 END
 ++~Sometimes the pride of one counts less than the life of many.~ + Northpast5
-++~Did they ask your opinion on the case.~ + Northpast5
+++~Did they ask your opinion on the case - or his?~ + Northpast5
 IF~Gender(Player1,FEMALE)~THEN REPLY~I would never let myself be treated like this!~+ Northpast5
 ++~I heard enough to know that it doesn't interest me anymore.~ + Northpast2
 ++~Political marriages are not uncommon among the children of rulers.~ + Northpast5
@@ -113,7 +113,7 @@ IF~Gender(Player1,FEMALE)~THEN REPLY~I would never let myself be treated like th
 CHAIN
 IF~~THEN EhlastJ Northpast5
 ~Senile old men have no right to determine the lives of the young. They did not even dare to ask us. I bet he would not have wanted me any bit more than I did not want him.~
-=~This was just a silly gesture, a symbol without meaning. What did it mean for peace that we two should waste our lives for it. If the peace were broken, which would have been my side then? And even in peace time, how would I live among that tribe of which I had killed so many be my own weapons?~
+=~This was just a silly gesture, a symbol without meaning. What did it mean for peace that we two should waste our lives for it. If the peace were broken, which would have been my side then? And even in peace time, how would I live among that tribe of which I had killed so many with my own weapons?~
 =~Enough for now. We may talk about my past another time again.~EXIT
 
 
