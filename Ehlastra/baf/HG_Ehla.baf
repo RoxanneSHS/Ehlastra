@@ -81,10 +81,31 @@ AddSpecialAbility("hg_chan")
 END
 
 IF
-OR(3)
+Global("HG_FaceMelSara","Global",1)
+!See("Mel01")
+Delay(30)
+THEN
+RESPONSE #100
+SetGlobal("HG_FaceMelSara","Global",2)
+END
+
+IF
+Global("TalkofPast","Locals",0)
+PartyRested()
+GlobalGT("HadBhaal25Dream1","GLOBAL",0)
+!AreaType(OUTDOOR)
+THEN
+RESPONSE #100
+SetGlobal("TalkofPast","Locals",1)
+END
+
+IF
+OR(5)
 Global("AxeIsback","Locals",1)
 Global("AxeNotback","Locals",1)
 Global("GiantCanChange","Locals",1)
+Global("HG_FaceMelSara","Global",2)
+Global("TalkofPast","Locals",1)
 InParty(Myself)
 !See([ENEMY])
 See(Player1)
