@@ -161,6 +161,20 @@ IF~~THEN EhlastJ Northpast26
 ~His advisors did not trust me, a mage named Winski and a priestess Tamoko. Sarevok was nervous because someone he called Gorion's Ward had crossed his plans several times.~
 =~Enough for now. We may talk about my past another time again.~EXIT
 
+CHAIN
+IF~Global("BanterStart","Locals",1)~ THEN EhlastJ Interiordeco
+~Ha, your blood relationship to Yaga-Shura shows clearly!~
+DO~SetGlobal("BanterStart","Locals",2) RealSetGlobalTimer("BanterstartTimer","Locals",1800)~
+END
+++~What?~ + Interiordeco2
+++~Ha, I guess you mean that as a joke.~+ Interiordeco2
+++~Bhaalspawns can't really be regarded as siblings.~+ Interiordeco2
+
+CHAIN
+IF~~THEN EhlastJ Interiordeco2
+~You share the same bad taste in interior design. And you overheat your quarters, that is not to the liking of one who was born in the north.~
+=~(The ghost of a smile rushes over her lips.)~EXIT
+
 
 INTERJECT HGNYA01 1  HG_FaceNyale1
 ==HGNYA01 IF~InParty("HGSLV01")~THEN~(A bony finger points at Ehlastra.) You go back to be pet for my boy, silly, you not be here with the other bhaalchild.~DO~SetGlobal("TalkedToNyalee","GLOBAL",1)~
@@ -185,6 +199,40 @@ I_C_T Sarmel01 64 HG_FaceMelSara
 ==EhlastJ IF~InParty("HGSLV01")~THEN~But you claimed to be friends with the bastard you now want to see rot, lady.~
 ==Sarmel01 IF~InParty("HGSLV01")~THEN~Who might you be? Why do you claim such a thing?~
 ==EhlastJ IF~InParty("HGSLV01")~THEN~The chained slave in Yaga-Shura's lair might not have been important enough to notice when you and your friends had your meetings of the Five...~
-==Sarmel01 IF~InParty("HGSLV01")~THEN~Oh, poor soul. You were a slave of the fire giant? That captivity has surely not done your mind good, poor one. I wish I could do something for you but the current situation requires our attention now~
+==Sarmel01 IF~InParty("HGSLV01")~THEN~Oh, poor soul. You were a slave of the fire giant? That captivity has surely not done your mind good, poor one. I wish I could do something for you but the current situation requires our attention now.~
 ==Sarmel01 IF~InParty("HGSLV01")~THEN~I need to discuss now with <CHARNAME>.~
 END
+
+CHAIN
+IF~Global("EhImoen","Locals",1)~ THEN EhlastJ Imobanter
+~You are <CHARNAME>'s oldest friend, right?~
+DO~SetGlobal("EhImoen","Locals",2) RealSetGlobalTimer("BanterstartTimer","Locals",1800)~
+==Bimoen25~Then you'd be <PRO_HISHER> latest acquisition, right.~
+==EhlastJ~Acquisition? I was once trapped to become a trophy but I rarely make mistakes twice.~
+==Bimoen25~Got your point, Ehlastra. You northern women have a weakness to be trapped by evil southern men, kinda reminds me of Branwen back then.~
+==EhlastJ~Branwen of Norheim? You have met her?~
+==Bimoen25~Yeah, some mage turned her into a stone statue and exposed her at carnivals and fairs. I had to rescue her and make her flesh again.~
+==EhlastJ~You?~
+==Bimoen25~With a little help from my friends...~EXIT
+
+CHAIN
+IF~Global("EhEdwin","Locals",1)~ THEN EhlastJ Edibanter
+~Where is Thay?~
+DO~SetGlobal("EhEdwin","Locals",2) RealSetGlobalTimer("BanterstartTimer","Locals",1800)~
+==Bedwin25~At the very centre of the multiverse, as every simian would know.~
+==EhlastJ~I see. It must be very small then to fit between the lands of the Elk tribe babarians and the realms of the goblins in the Evermoors. All of them claim to be at the centre of the multiverse. Not to forget all the egomaniacs who think of themselves as our masters.~
+==Bedwin25~Did your master even allow you to talk to a superior like me?~
+==EhlastJ~<PRO_HESHE> obviously forgot. <PRO_HESHE> as well forgot to order me not to use my berserker rage against red-robed imposters.~
+==Bedwin25~Bark at the moon, wolf child.~DO~RunAwayFrom("HGSLV01",40)~EXIT
+
+CHAIN
+IF~Global("EhSarevok","Locals",1)~ THEN EhlastJ Sarbanter
+~Will it be our luck or a missed chance that you refused my company back on the Sword Coast?~
+DO~SetGlobal("EhSarevok","Locals",2) RealSetGlobalTimer("BanterstartTimer","Locals",1800)~
+==Bsarev25~While someone like you might have made a change in my first confrontation with <CHARNAME> I have my doubts when I see what we are really up against today.~
+==EhlastJ~You mean that you underestimated the bhaalsspawns that fight for the Throne.~
+==Bsarev25~I studied my subject thoroughly. I admit that Gorion's Ward was the most powerful I encountered in reality. Those like the Five have grown very fast.~
+==EhlastJ~So has <CHARNAME>, am I right? <PRO_HESHE> is much more than the one who defeated you. Imagine that you might have grown in a similar way if you had been given the chance.~
+==Bsarev25~Let's not waste our breath on such speculations. To answer your initial question I'd say that a missed chance may turn out to be our luck in the long run.~
+==EhlastJ~You agree with me that we need to motivate <CHARNAME> to accept the challenge?~
+==Bsarev25~Of course. When <PRO_HESHE> claims <PRO_HISHER> heritage we will rise with <PRO_HIMHER>, so much is sure.~EXIT

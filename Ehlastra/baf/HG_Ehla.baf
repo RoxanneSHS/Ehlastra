@@ -100,12 +100,33 @@ SetGlobal("TalkofPast","Locals",1)
 END
 
 IF
-OR(5)
+Global("TalkofPast","Locals",2)
+RealGlobalTimerExpired("TalkofPastT","Locals")
+!AreaType(DUNGEON)
+!AreaCheck("ar4500")
+THEN
+RESPONSE #100
+SetGlobal("TalkofPast","Locals",3)
+END
+
+IF
+AreaCheck("ar4500")
+Global("BanterStart","Locals",0)
+Delay(30)
+THEN
+RESPONSE #100
+SetGlobal("BanterStart","Locals",1)
+END
+
+IF
+OR(7)
 Global("AxeIsback","Locals",1)
 Global("AxeNotback","Locals",1)
 Global("GiantCanChange","Locals",1)
 Global("HG_FaceMelSara","Global",2)
 Global("TalkofPast","Locals",1)
+Global("TalkofPast","Locals",3)
+Global("BanterStart","Locals",1)
 InParty(Myself)
 !See([ENEMY])
 See(Player1)
@@ -114,5 +135,60 @@ CombatCounter(0)
 THEN
 RESPONSE #100
 MoveToObject(Player1)
+StartDialogNoSet("EhlastJ")
+END
+
+IF
+Global("BanterStart","Locals",2) 
+RealGlobalTimerExpired("BanterstartTimer","Locals")
+InParty("Imoen2")
+See("Imoen2")
+!See([ENEMY])
+Global("EhImoen","Locals",0)
+CombatCounter(0)
+THEN
+RESPONSE #100
+SetGlobal("EhImoen","Locals",1)
+END
+
+IF
+Global("BanterStart","Locals",2) 
+RealGlobalTimerExpired("BanterstartTimer","Locals")
+InParty("Edwin")
+See("Edwin")
+!See([ENEMY])
+Global("EhEdwin","Locals",0)
+CombatCounter(0)
+THEN
+RESPONSE #100
+SetGlobal("EhEdwin","Locals",1)
+END
+
+IF
+Global("BanterStart","Locals",2) 
+RealGlobalTimerExpired("BanterstartTimer","Locals")
+InParty("Sarevok")
+See("Sarevok")
+!See([ENEMY])
+Global("EhSarevok","Locals",0)
+GlobalGT("TalkofPast","Locals",3)
+CombatCounter(0)
+THEN
+RESPONSE #100
+SetGlobal("EhSarevok","Locals",1)
+END
+
+IF
+OR(4)
+Global("EhImoen","Locals",1)
+Global("EhEdwin","Locals",1)
+Global("EhDorn","Locals",1)
+Global("EhSarevok","Locals",1)
+InParty(Myself)
+!See([ENEMY])
+!StateCheck(Player1,CD_STATE_NOTVALID)
+CombatCounter(0)
+THEN
+RESPONSE #100
 StartDialogNoSet("EhlastJ")
 END
