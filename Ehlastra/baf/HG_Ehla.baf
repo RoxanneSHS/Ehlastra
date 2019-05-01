@@ -151,6 +151,7 @@ END
 IF
 Global("BanterStart","Locals",2) 
 RealGlobalTimerExpired("BanterstartTimer","Locals")
+RealGlobalTimerExpired("TalkofPastT","Locals")
 InParty("Imoen2")
 See("Imoen2")
 !See([ENEMY])
@@ -158,12 +159,14 @@ Global("EhImoen","Locals",0)
 CombatCounter(0)
 THEN
 RESPONSE #100
+RealSetGlobalTimer("BanterstartTimer","Locals",1800)
 SetGlobal("EhImoen","Locals",1)
 END
 
 IF
 Global("BanterStart","Locals",2) 
 RealGlobalTimerExpired("BanterstartTimer","Locals")
+RealGlobalTimerExpired("TalkofPastT","Locals")
 InParty("Edwin")
 See("Edwin")
 !See([ENEMY])
@@ -171,12 +174,14 @@ Global("EhEdwin","Locals",0)
 CombatCounter(0)
 THEN
 RESPONSE #100
+RealSetGlobalTimer("BanterstartTimer","Locals",1800)
 SetGlobal("EhEdwin","Locals",1)
 END
 
 IF
 Global("BanterStart","Locals",2) 
 RealGlobalTimerExpired("BanterstartTimer","Locals")
+RealGlobalTimerExpired("TalkofPastT","Locals")
 InParty("Sarevok")
 See("Sarevok")
 !See([ENEMY])
@@ -185,12 +190,14 @@ GlobalGT("TalkofPast","Locals",3)
 CombatCounter(0)
 THEN
 RESPONSE #100
+RealSetGlobalTimer("BanterstartTimer","Locals",1800)
 SetGlobal("EhSarevok","Locals",1)
 END
 
 IF
 Global("BanterStart","Locals",2) 
 RealGlobalTimerExpired("BanterstartTimer","Locals")
+RealGlobalTimerExpired("TalkofPastT","Locals")
 InParty("Dorn")
 See("Dorn")
 !See([ENEMY])
@@ -198,6 +205,7 @@ Global("EhDorn","Locals",0)
 CombatCounter(0)
 THEN
 RESPONSE #100
+RealSetGlobalTimer("BanterstartTimer","Locals",1800)
 SetGlobal("EhDorn","Locals",1)
 END
 

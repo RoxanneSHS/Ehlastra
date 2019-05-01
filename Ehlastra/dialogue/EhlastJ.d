@@ -136,7 +136,7 @@ IF~Gender(Player1,FEMALE)~THEN REPLY~Typical males, they can't stomach a strong 
 
 CHAIN
 IF~~THEN EhlastJ Northpast23
-~(She ignores your interjection.) I came to the Sword Coast and learned bits and peaces about the bhaalspawn story. And one day in the vicinity of Boareskyr Bridge and the Winding Water I met one of them near a former Bhaal temple which the Cyricists had taken over.~
+~(She ignores your interjection.) I came to the Sword Coast and learned bits and pieces about the bhaalspawn story. And one day in the vicinity of Boareskyr Bridge and the Winding Water I met one of them near a former Bhaal temple which the Cyricists had taken over.~
 END
 IF~!InParty("Sarevok")~THEN REPLY~I bet I know who that was.~+ Northpast24
 IF~InParty("Sarevok")~THEN REPLY~I bet I know who that was.~EXTERN Sarev25J Northpast25
