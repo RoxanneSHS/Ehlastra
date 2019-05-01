@@ -123,7 +123,7 @@ DO~SetGlobal("TalkofPast","Locals",4) RealSetGlobalTimer("TalkofPastT","Locals",
 END
 ++~It's always good to know who are the ones you travel with.~ + Northpast22
 ++~I heard enough to know the rest. No need to hear more~ + Northpast2
-++~You came to the point where a forced marriage was waiting for you. Obviously I didn't happen that way?~ + Northpast22
+++~You came to the point where a forced marriage was waiting for you. Obviously it didn't happen that way?~ + Northpast22
 
 CHAIN
 IF~~THEN EhlastJ Northpast22
@@ -175,33 +175,34 @@ IF~~THEN EhlastJ Interiordeco2
 ~You share the same bad taste in interior design. And you overheat your quarters, that is not to the liking of one who was born in the north.~
 =~(The ghost of a smile rushes over her lips.)~EXIT
 
-
-INTERJECT HGNYA01 1  HG_FaceNyale1
-==HGNYA01 IF~InParty("HGSLV01")~THEN~(A bony finger points at Ehlastra.) You go back to be pet for my boy, silly, you not be here with the other bhaalchild.~DO~SetGlobal("TalkedToNyalee","GLOBAL",1)~
-==EhlastJ IF~InParty("HGSLV01")~THEN~You have any reason to fear me, Nyalee, Witch of the Glade. But I am free of the chains and I will use the dark power you worked on me against you and your boy now.~ DO~ReallyForceSpellRES("HG_CHAN","HGSLV01")~
-==HGNYA01 IF~InParty("HGSLV01")~THEN~Listen not to her, powerful one.~
-END HGNYA01 3
-
-I_C_T2  HGNYA01 25 HG_FaceNyale2
-==HGNYA01 IF~InParty("HGSLV01")Global("HG_FaceNyale1","Global",0)~THEN~(A bony finger points at Ehlastra.) You go back to be pet for my boy, silly, you not be here with the other bhaalchild.~
-==EhlastJ IF~InParty("HGSLV01")Global("HG_FaceNyale1","Global",0)~THEN~You have any reason to fear me, Nyalee, Witch of the Glade. But I am free of the chains and I will use the dark power you worked on me against you and your boy now.~ DO~ReallyForceSpellRES("HG_CHAN","HGSLV01")~
-==HGNYA01 IF~InParty("HGSLV01")Global("HG_FaceNyale1","Global",0)~THEN~Listen not to her, powerful one.~
+CHAIN
+IF~Global("HG_FaceBalth","Global",2)~ THEN EhlastJ Baltmet1
+~He has not changed. He is like a wall of silence.~
+DO~SetGlobal("HG_FaceBalth","Global",3)~
 END
+++~What is your relation to him?~ + Baltmet2
+++~How come you know him?~ + Baltmet2
+++~Is there anyone involved here that you don't know already?~ + Baltmet2
+++~I wish you were as well.~DO~SetGlobal("HG_FaceBalth","Global",63)~EXIT
 
-I_C_T Yaga01 2 HG_FaceYaga
-==Yaga01 IF~InParty("HGSLV01")~THEN~YOU, go back to your chain, slave Ehlastra, you and I are not finished yet. You're there to breed Yaga-Shura's prodigy.~
-==EhlastJ IF~InParty("HGSLV01")~THEN~Dumb boy. There will be no little big kiddies from your loins. You are facing your betters today.~
-==EhlastJ IF~InParty("HGSLV01")~THEN~Ha, <CHARNAME>, did I ever tell you why my fire giantess transformation only lasts 90 seconds. That is how long that oversized wind bag can hold up his manhood.~
-==Yaga01 IF~InParty("HGSLV01")~THEN~So it's that <CHARNAME> stole you and you now fall with <PRO_HIMHER>. We see to that.~
+CHAIN
+IF~~THEN EhlastJ Baltmet2
+~He was my first choice when I came to Tethir but I erred. Despite all his power it seems that he is somehow different from all of you.~
+=~When I offered my services to help him in the struggle for power he almost threw me out. He said he was not after the "stain" but fighting it.~
 END
+++~Do you imply that he is another bhaalspawn?~ + Baltmet3
+++~You erred when you suspected him to be a bhaalspawn?~ + Baltmet3
 
-I_C_T Sarmel01 64 HG_FaceMelSara
-==EhlastJ IF~InParty("HGSLV01")~THEN~But you claimed to be friends with the bastard you now want to see rot, lady.~
-==Sarmel01 IF~InParty("HGSLV01")~THEN~Who might you be? Why do you claim such a thing?~
-==EhlastJ IF~InParty("HGSLV01")~THEN~The chained slave in Yaga-Shura's lair might not have been important enough to notice when you and your friends had your meetings of the Five...~
-==Sarmel01 IF~InParty("HGSLV01")~THEN~Oh, poor soul. You were a slave of the fire giant? That captivity has surely not done your mind good, poor one. I wish I could do something for you but the current situation requires our attention now.~
-==Sarmel01 IF~InParty("HGSLV01")~THEN~I need to discuss now with <CHARNAME>.~
+CHAIN
+IF~~THEN EhlastJ Baltmet3
+~(For a moment she seems baffled.) Oh, he belongs to the Five of course. I thought that was clear. Anyway, it looks to me that he somehow does not share the same belief as the others. And he does not trust Melissan.~
 END
+++~That mistrust for the lady is something we have in common.~ + Baltmet4
+++~Any other insight that you can share about him?~ + Baltmet4
+
+CHAIN
+IF~~THEN EhlastJ Baltmet4
+~I never had the chance to get closer to him than that. He was mostly silent when the Five and Melissan were meeting. From the little outburst he had when we first met I conclude that he fights against his heritage and doubts his destiny. This will make him a weak opponent in the end. Good for you, <CHARNAME>.~EXIT
 
 CHAIN
 IF~Global("EhImoen","Locals",1)~ THEN EhlastJ Imobanter
@@ -236,3 +237,12 @@ DO~SetGlobal("EhSarevok","Locals",2) RealSetGlobalTimer("BanterstartTimer","Loca
 ==Bsarev25~Let's not waste our breath on such speculations. To answer your initial question I'd say that a missed chance may turn out to be our luck in the long run.~
 ==EhlastJ~You agree with me that we need to motivate <CHARNAME> to accept the challenge?~
 ==Bsarev25~Of course. When <PRO_HESHE> claims <PRO_HISHER> heritage we will rise with <PRO_HIMHER>, so much is sure.~EXIT
+
+CHAIN
+IF~Global("EhDorn","Locals",1)~ THEN EhlastJ Dorbanter
+~You are a slave to your bloodlust with an insatiable urge to kill. Do you not sometimes feel the need for something else?~
+DO~SetGlobal("EhDorn","Locals",2) RealSetGlobalTimer("BanterstartTimer","Locals",1800)~
+==Bdorn25~I'm sure <CHARNAME> will give us ample opportunity to shed blood by the bucketful. I can see that the thought of it makes you breathe harder in anticipation of the joy.~
+==EhlastJ~Tempus guides me. Bloodshed is one thing that gets me excited but not the only thing.~
+==Bdorn25~Northern women choose their mates from the winners. My patron affords me more power than you will ever consume, Ehlastra.~
+==EhlastJ~I heard bigger promises from lesser men, Dorn. I see potential in you.~EXIT
