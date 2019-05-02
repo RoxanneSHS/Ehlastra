@@ -6,7 +6,8 @@ IF~!Global("AxeNotback","Locals",2)~ THEN Ehlastp Return2
 END
 ++~Yes, come along with me and prove your worth.~ DO~JoinParty()~EXIT
 IF~AreaCheck("AR4500")~THEN REPLY~I was just checking your mood. It seems to be grim as usual. Just wait here until I need you.~EXIT
-IF~!AreaCheck("AR4500")~THEN REPLY~I need you to return to the pocket plane and wait for my return.~DO~MoveBetweenAreas("AR4500",[1720.1195],14)~ EXIT
+IF~!AreaCheck("AR4500")GlobalLT("SanBeginRTF","GLOBAL",1)~THEN REPLY~I need you to return to the pocket plane and wait for my return.~DO~MoveBetweenAreas("AR4500",[1720.1195],14)~ EXIT
+IF~GlobalGT("SanBeginRTF","GLOBAL",1)~THEN REPLY~Ehlastra, good to see you alive. Just wait here until I need you.~EXIT
 
 CHAIN
 IF~Global("AxeNotback","Locals",2)AreaCheck("AR5204")~THEN Ehlastp Return1

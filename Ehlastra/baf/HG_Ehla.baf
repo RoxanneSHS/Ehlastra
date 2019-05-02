@@ -14,6 +14,8 @@ THEN
 RESPONSE #100
 SetGlobal("HG_EhlaJoin","GLOBAL",1)
 SetName(@001)
+Wait(1)
+AddXPObject(Myself,3000000)
 END
 
 IF
