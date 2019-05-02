@@ -13,7 +13,7 @@ END
 I_C_T Yaga01 2 HG_FaceYaga
 ==Yaga01 IF~InParty("HGSLV01")~THEN~YOU, go back to your chain, slave Ehlastra, you and I are not finished yet. You're there to breed Yaga-Shura's prodigy.~
 ==EhlastJ IF~InParty("HGSLV01")~THEN~Dumb boy. There will be no little big kiddies from your loins. You are facing your betters today.~
-==EhlastJ IF~InParty("HGSLV01")~THEN~Ha, <CHARNAME>, did I ever tell you why my fire giantess transformation only lasts 90 seconds. That is how long that oversized wind bag can hold up his manhood.~
+==EhlastJ IF~InParty("HGSLV01")~THEN~Ha, <CHARNAME>, did I ever tell you why my fire giantess transformation only lasts 90 seconds. That is how long that oversized wind bag can hold up his manhood.~DO~ReallyForceSpellRES("HG_CHAN","HGSLV01")~
 ==Yaga01 IF~InParty("HGSLV01")~THEN~So it's that <CHARNAME> stole you and you now fall with <PRO_HIMHER>. We see to that.~
 END
 
@@ -29,8 +29,14 @@ I_C_T Balth 1 HG_FaceBalth
 ==EhlastJ IF~InParty("HGSLV01")~THEN~And so we meet again, Balthazar.~
 ==Balth IF~InParty("HGSLV01")~THEN~And again in the company of a child of Bhaal.~
 ==EhlastJ IF~InParty("HGSLV01")~THEN~Company it is in deed this time. It was slavery with Yaga-Shura but he is dead now and I am free.~
-==Balth IF~InParty("HGSLV01")~THEN~If you think I feel guilty for it, Ehlastra, you are wrong.~
+==Balth IF~InParty("HGSLV01")~THEN~If you think I feel guilty for it, Ehlastra, you are wrong.~DO ~IncrementGlobal("ConvinceBalth","GLOBAL",2)~
 ==EhlastJ IF~InParty("HGSLV01")~THEN~You could not know what would happen when you sent me away. Anyway, where is Melissan?~
+END
+
+I_C_T Balth 17 HG_ConvinceBalth
+==EhlastJ IF~InParty("HGSLV01")~THEN~<CHARNAME> may have more understanding for your intentions then you imagine, Balthazar.~DO ~IncrementGlobal("ConvinceBalth","GLOBAL",1)~
+==Balth IF~InParty("HGSLV01")~THEN~I give you credit for knowing <PRO_HIMHER> better than I do, Ehlastra.~
+==EhlastJ IF~InParty("HGSLV01")~THEN~You should then take into account that you have similar intentions and working together may be the better option than to let the traitress divide you. Tell <CHARNAME> more about your foe.~
 END
 
 //Volo

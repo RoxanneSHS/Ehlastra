@@ -68,9 +68,10 @@ END
 
 IF
 Global("GiantCanChange","Locals",0)
-OR(2)
+OR(3)
 Global("HG_FaceNyale1","Global",1)
 Global("HG_FaceNyale2","Global",1)
+Global("HG_FaceYaga","Global",1)
 OR(2)
 Dead("HGNYA01")
 !See("HGNYA01")
@@ -128,7 +129,27 @@ SetGlobal("HG_FaceBalth","Global",2)
 END
 
 IF
-OR(8)
+Global("TalkofPast","Locals",4)
+RealGlobalTimerExpired("TalkofPastT","Locals")
+!Global("SaemonPlot","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("TalkofPast","Locals",5)
+END
+
+IF
+Global("HG_FaceBalth","Global",3)
+!Dead("Balth")
+OR(2)
+AreaCheck("AR6000")
+AreaCheck("AR6100")
+THEN
+RESPONSE #100
+SetGlobal("HG_FaceBalth","Global",4)
+END
+
+IF
+OR(10)
 Global("AxeIsback","Locals",1)
 Global("AxeNotback","Locals",1)
 Global("GiantCanChange","Locals",1)
@@ -137,6 +158,8 @@ Global("TalkofPast","Locals",1)
 Global("TalkofPast","Locals",3)
 Global("BanterStart","Locals",1)
 Global("HG_FaceBalth","Global",2)
+Global("TalkofPast","Locals",5)
+Global("HG_FaceBalth","Global",4)
 InParty(Myself)
 !See([ENEMY])
 See(Player1)

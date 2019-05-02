@@ -182,7 +182,7 @@ DO~SetGlobal("HG_FaceBalth","Global",3)~
 END
 ++~What is your relation to him?~ + Baltmet2
 ++~How come you know him?~ + Baltmet2
-++~Is there anyone involved here that you don't know already?~ + Baltmet2
+++~Is there anyone involved here whom you don't know already?~ + Baltmet2
 ++~I wish you were as well.~DO~SetGlobal("HG_FaceBalth","Global",63)~EXIT
 
 CHAIN
@@ -203,6 +203,110 @@ END
 CHAIN
 IF~~THEN EhlastJ Baltmet4
 ~I never had the chance to get closer to him than that. He was mostly silent when the Five and Melissan were meeting. From the little outburst he had when we first met I conclude that he fights against his heritage and doubts his destiny. This will make him a weak opponent in the end. Good for you, <CHARNAME>.~EXIT
+
+CHAIN
+IF ~Global("TalkofPast","Locals",5)~THEN EhlastJ Inevi
+~We are to face demigods together. Maybe you are one yourself already. Have you ever wanted this, <CHARNAME>?~
+DO~SetGlobal("TalkofPast","Locals",6) ~
+END
+++ ~I start to enjoy it. It means my victory - and my ascension.~ + Inevi1
+++ ~It has to be endured because after this, I'll be free.~ + Inevi2
+++ ~No. I feel like a pawn in somebod's game.~ + Inevi3
+++ ~It was inevitable. Alaundo predicted these events, you know.~ + Inevi3
+++ ~Let's talk later.~ + Inevi4
+
+CHAIN
+IF ~~THEN EhlastJ Inevi4
+~As you wish.~EXIT
+
+CHAIN
+IF ~~THEN EhlastJ Inevi1
+~You may dream of power, but I would not ne so sure. It seems like that Solar's in power, not you.~
+=~It leaves me uncomfortable. We are played like figures on a chess board, moved at this Solar's whim or Melissan's.~
+= ~I prayed to Tempus, but as long as blood is shed, the Lord of Battles is content.~
+= ~Ha, I like to dig my nails deep into Melissan's lying face, if I could. That bitch! Let her fight her own wars and leave us alone. If you wanted to fight your siblings, you should be making the rules for it.~
+END
+++ ~I wouldn't know about them, Ehlastra. She at least brings some focus into the game.~ + Inevi4
+++ ~She's actually helping me. She does all the spying and tricksing for me.~ + Inevi5
+++ ~I don't like her, either. Too arrogant for my taste.~ + Inevi4
+++ ~Maybe she's not that unkillable...~ + Inevi7
+
+CHAIN
+IF ~~THEN EhlastJ Inevi2
+~Or dead. That happens a lot during wars, too. It may be considered free in its own final way.~
+=~It leaves me uncomfortable. We are played like figures on a chess board, moved at this Solar's whim or Melissan's.~
+= ~I prayed to Tempus, but as long as blood is shed, the Lord of Battles is content.~
+= ~Ha, I like to dig my nails deep into Melissan's lying face, if I could. That bitch! Let her fight her own wars and leave us alone. If you wanted to fight your siblings, you should be making the rules for it.~
+END
+++ ~I wouldn't know about them, Ehlastra. She at least brings some focus into the game.~ + Inevi4
+++ ~She's actually helping me. She does all the spying and tricksing for me.~ + Inevi5
+++ ~I don't like her, either. Too arrogant for my taste.~ + Inevi4
+++ ~Maybe she's not that unkillable...~ + Inevi7
+
+CHAIN
+IF ~~THEN EhlastJ Inevi3
+~It leaves me uncomfortable. We are played like figures on a chess board, moved at this Solar's whim or Melissan's.~
+= ~I prayed to Tempus, but as long as blood is shed, the Lord of Battles is content.~
+= ~Ha, I like to dig my nails deep into Melissan's lying face, if I could. That bitch! Let her fight her own wars and leave us alone. If you wanted to fight your siblings, you should be making the rules for it.~
+END
+++ ~I wouldn't know about them, Ehlastra. She at least brings some focus into the game.~ + Inevi6
+++ ~She's actually helping me. She does all the spying and tricksing for me.~ + Inevi5
+++ ~I don't like her, either. Too arrogant for my taste.~ + Inevi4
+++ ~Maybe she's not that unkillable...~ + Inevi7
+
+CHAIN
+IF ~~THEN EhlastJ Inevi6
+~True and yet this manipulator annoys me to no end.~
+=~Somehow I feel it was good end up being with you. Walking, laughing, and even complaining. I feel like together we will be victorious and come out heroes from this whole mess.~ EXIT
+
+CHAIN
+IF ~~THEN EhlastJ Inevi5
+~To advance her own goals, or not? She may have her own interest in you or your failure.~ 
+=~Somehow I feel it was good end up being with you. Walking, laughing, and even complaining. I feel like together we will be victorious and come out heroes from this whole mess.~ EXIT
+
+CHAIN
+IF ~~THEN EhlastJ Inevi7
+~Ha! I like the way you think.~
+=~Somehow I feel it was good end up being with you. Walking, laughing, and even complaining. I feel like together we will be victorious and come out heroes from this whole mess.~ EXIT
+
+CHAIN
+IF~Global("HG_FaceBalth","Global",4)~THEN EhlastJ JoinBalth1
+~I have recently been thinking about Balthazar again.~
+DO~SetGlobal("HG_FaceBalth","Global",5)~
+END
+++~Any insight into the world of the Five would be welcome, Ehlastra.~+ JoinBalth3
+++~You-have-been-"thinking"...woman...~+ JoinBalth2
+++~You issued some suspicion about his intentions already.~+ JoinBalth3
+
+CHAIN
+IF~~THEN EhlastJ JoinBalth2
+~(slap)~
+END
+++~Ouch!~+ JoinBalth3
+
+CHAIN
+IF~~THEN EhlastJ JoinBalth3
+~What if there were other ways to solve the whole bhaalwar than those some ancient dusty prophesy seems to dictate? What if he found an alternative?~
+END
+++~An interesting idea. ~ + JoinBalth4
+++~He may be closer to me in this case than I thought.~ + JoinBalth4
+++~There will be a winner in this - by the way, it will be me - who will claim <PRO_HISHER> birthright.~ + JoinBalth6
+
+CHAIN
+IF~~THEN EhlastJ JoinBalth4
+~The chance to prevent the God of Murder from returning may just be as glorious and heroic as to take his portfolio.~
+END
+++~Would you stand by my side, Ehlastra, if just that would be my own intention?~ DO ~IncrementGlobal("ConvinceBalth","GLOBAL",2)~ + JoinBalth5
+++~I am afraid my only way to survive all of this is to fulfil the prophesy. Will you stand by me, Ehlastra.~+ JoinBalth5
+
+CHAIN
+IF~~THEN EhlastJ JoinBalth5
+~Yes, I will.~EXIT
+
+CHAIN
+IF~~THEN EhlastJ JoinBalth6
+~You make it sound like you accept your role to be nothing but a puppet on a string. I had thought of you as stronger in character. Be this as it may.~
+=~Let us move on.~EXIT
 
 CHAIN
 IF~Global("EhImoen","Locals",1)~ THEN EhlastJ Imobanter
