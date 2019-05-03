@@ -258,7 +258,7 @@ END
 CHAIN
 IF ~~THEN EhlastJ Inevi6
 ~True and yet this manipulator annoys me to no end.~
-=~Somehow I feel it was good end up being with you. Walking, laughing, and even complaining. I feel like together we will be victorious and come out heroes from this whole mess.~ EXIT
+=~Somehow I feel it was good to end up being with you. Walking, laughing, and even complaining. I feel like together we will be victorious and come out heroes from this whole mess.~ EXIT
 
 CHAIN
 IF ~~THEN EhlastJ Inevi5
@@ -338,7 +338,7 @@ DO~SetGlobal("EhSarevok","Locals",2) RealSetGlobalTimer("BanterstartTimer","Loca
 ==Bsarev25~While someone like you might have made a change in my first confrontation with <CHARNAME> I have my doubts when I see what we are really up against today.~
 ==EhlastJ~You mean that you underestimated the bhaalsspawns that fight for the Throne.~
 ==Bsarev25~I studied my subject thoroughly. I admit that Gorion's Ward was the most powerful I encountered in reality. Those like the Five have grown very fast.~
-==EhlastJ~So has <CHARNAME>, am I right? <PRO_HESHE> is much more than the one who defeated you. Imagine that you might have grown in a similar way if you had been given the chance.~
+==EhlastJ~So has <CHARNAME>, am I right? Now <PRO_HESHE> is much more than the one who defeated you. Imagine that you might have grown in a similar way if you had been given the chance.~
 ==Bsarev25~Let's not waste our breath on such speculations. To answer your initial question I'd say that a missed chance may turn out to be our luck in the long run.~
 ==EhlastJ~You agree with me that we need to motivate <CHARNAME> to accept the challenge?~
 ==Bsarev25~Of course. When <PRO_HESHE> claims <PRO_HISHER> heritage we will rise with <PRO_HIMHER>, so much is sure.~EXIT
