@@ -310,6 +310,29 @@ IF~~THEN EhlastJ JoinBalth6
 =~Let us move on.~EXIT
 
 CHAIN
+IF~Global("Ehlasex","Locals",1)~THEN EhlastJ SexM1
+~I am confident that we will succeed. The victory of this bhaalwar will be ours.~
+=~(Her voice is unmistakably lascivious.) I have a need tonight to assure the bond between us that will make us strong enough. I need you.~
+DO~SetGlobal("Ehlasex","Locals",3)~
+END
+++~I'm not sure I'm too happy with that proposal.~ + SexM2
+IF~Gender(Player1,FEMALE)~THEN REPLY~I have never expected that you would propose such a thing to a woman...~ + SexF2
+++~You are late but not too late, Ehlastra.~+ SexM2
+
+CHAIN
+IF~~THEN EhlastJ SexF2
+~I never did, be assured, <CHARNAME>, but I have never been in such a turmoil of joy, admiration and terror before. This is different from everything you and I have ever experienced.~
+END
+++~So you*re not one of those...~ + SexM2
+++~I wouldn't have minded if you loved women, that's no problem with me.~ + SexM2
+
+CHAIN
+IF~~THEN EhlastJ SexM2
+~Hush. You worry too much. I will not make demands or promises. This is not about undying love or flowery romance, this is giving Tempus his share.~
+=~We will gain the strength for the battle to come by letting our bodies unite.~
+=~(Her kiss cuts a possible protest and her berserker strength is irresistible anyway.)~DO~StartCutSceneMode() Wait(2) FadeToColor([30.0],0) Wait(4) FadeFromColor([30.0],0) Wait(2) EndCutSceneMode()Wait(2) RestParty()~EXIT
+
+CHAIN
 IF~Global("EhImoen","Locals",1)~ THEN EhlastJ Imobanter
 ~You are <CHARNAME>'s oldest friend, right?~
 DO~SetGlobal("EhImoen","Locals",2) RealSetGlobalTimer("BanterstartTimer","Locals",1800)~

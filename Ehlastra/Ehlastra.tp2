@@ -20,6 +20,7 @@ SAY BIO @005
 //ADD_JOURNAL @1002 @1003 @1004 @1011 USING ~Ehlastra/Tra/Setup-Ehlastra.tra~
 
 COMPILE ~Ehlastra/baf/HG_Ehla.baf~
+COMPILE ~Ehlastra/baf/EhlastD.baf~
 
 COMPILE ~Ehlastra/dialogue~
 
