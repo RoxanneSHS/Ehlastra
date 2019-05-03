@@ -59,3 +59,7 @@ EXTEND_TOP ~finbodh.bcs~ ~Ehlastra/baf/HG_Axe5.baf~
 EXTEND_TOP ~fingrom.bcs~ ~Ehlastra/baf/HG_Axe5.baf~
 EXTEND_TOP ~finiren.bcs~ ~Ehlastra/baf/HG_Axe5.baf~
 EXTEND_TOP ~finsend.bcs~ ~Ehlastra/baf/HG_Axe5.baf~
+EXTEND_TOP ~ar6200.bcs~ ~Ehlastra/baf/HG_6200.baf~
+
+COPY ~Ehlastra/Misc/HG_balt.2da~ ~override/HG_balt.2da~ REPLACE 82760 @011
+COPY ~Ehlastra/Misc/HG_balt.2da~ ~override/HG_Noba.2da~ REPLACE 82760 @012
