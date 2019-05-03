@@ -16,6 +16,13 @@ WRITE_ASCII 0x34 ~Ehlastra~ #8
 WRITE_ASCII 0x3c ~Ehlastra~ #8
 WRITE_ASCII 0x248 ~HG_Ehla~ #8
 SAY BIO @005
+LAUNCH_PATCH_FUNCTION ADD_CRE_EFFECT
+    INT_VAR
+    opcode = 360 //Ignore reputation
+    timing = 9 //Permanent
+    target = 1 //Self
+    resist_dispel = 0 //Not dispellable + bypass resistance
+  END
 
 //ADD_JOURNAL @1002 @1003 @1004 @1011 USING ~Ehlastra/Tra/Setup-Ehlastra.tra~
 
