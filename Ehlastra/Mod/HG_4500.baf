@@ -1,0 +1,7 @@
+IF
+Global("O#BranSummoned","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("O#BranSummoned","GLOBAL",2)
+Continue()
+END
