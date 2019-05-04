@@ -151,7 +151,16 @@ SetGlobal("HG_FaceBalth","Global",4)
 END
 
 IF
-OR(10)
+Global("HG_BalthLater","Global",1)
+!Dead("Balth")
+AreaCheck("AR5500")
+THEN
+RESPONSE #100
+SetGlobal("HG_BalthLater","Global",2)
+END
+
+IF
+OR(11)
 Global("AxeIsback","Locals",1)
 Global("AxeNotback","Locals",1)
 Global("GiantCanChange","Locals",1)
@@ -162,6 +171,7 @@ Global("BanterStart","Locals",1)
 Global("HG_FaceBalth","Global",2)
 Global("TalkofPast","Locals",5)
 Global("HG_FaceBalth","Global",4)
+Global("HG_BalthLater","Global",2)
 InParty(Myself)
 !See([ENEMY])
 See(Player1)

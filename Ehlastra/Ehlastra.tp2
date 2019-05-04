@@ -71,3 +71,10 @@ EXTEND_TOP ~ar6200.bcs~ ~Ehlastra/baf/HG_6200.baf~
 
 COPY ~Ehlastra/Misc/HG_balt.2da~ ~override/HG_balt.2da~ REPLACE 82760 @011
 COPY ~Ehlastra/Misc/HG_balt.2da~ ~override/HG_Noba.2da~ REPLACE 82760 @012
+
+ACTION_IF FILE_EXISTS_IN_GAME ~dw#melis.cre~ THEN BEGIN
+	OUTER_SET actual_confront_state = (STATE_WHICH_SAYS 0 IN ~wheels/tra/%s/balthadd.tra~ FROM ~balth~)
+COPY ~Ehlastra/Mod/WheelsInterject.d~  ~Ehlastra/Mod/WheelsInterject.d~
+REPLACE_TEXTUALLY ~1113~ ~%actual_confront_state%~
+COMPILE ~Ehlastra/Mod/WheelsInterject.d~
+END
