@@ -397,9 +397,9 @@ See("HGSLV01")
 InParty(Myself)
 !StateCheck("Neera",CD_STATE_NOTVALID)
 !StateCheck("HGSLV01",CD_STATE_NOTVALID)
-Global("HGSLV01NeeraToB1","Locals",0)~ THEN BNEERA25 ehlNeeraToB1
+Global("EhlaNeeraToB","Locals",0)~ THEN BNEERA25 ehlNeeraToB1
 ~I'm bored.~
-DO ~SetGlobal("HGSLV01NeeraToB1","Locals",1)~
+DO ~SetGlobal("EhlaNNeeraToB","Locals",1)~
 == EhlastJ ~By the icicles of Auril, how come? A bhaalspawn war is raging in Tethir and the multiverse is trying to kill us - how boring.~
 == BNEERA25 ~Aren't you northerners supposed to respect old prophecies and cryptic messengers?~
 == EhlastJ ~Not when it is my own and my friends' lives on the stake, Neera. In the current case I see a good chance that it may be us who finally write the definite version of this prophecy.~
@@ -415,9 +415,9 @@ See("HGSLV01")
 InParty(Myself)
 !StateCheck("HGSLV01",CD_STATE_NOTVALID)
 !StateCheck("Viconia",CD_STATE_NOTVALID)
-Global("O#BranViconiaToB1","GLOBAL",0)~ THEN BVICON25 EhlViconiaToB
+Global("EhlaViconiaToB","Locals",0)~ THEN BVICON25 EhlViconiaToB
 ~I considered you weak because you were slave to a male. I have come to change my mind by now.~
-DO ~SetGlobal("O#BranViconiaToB1","GLOBAL",1)~
+DO ~SetGlobal("EhlaNViconiaToB","Locals",1)~
 == EhlastJ ~I have been waiting for that moment eagerly, drow. Your opinion is utterly important to me, thank you for sharing it.~
 == BVICON25 ~I have been long enough on the damned surface to know this tone. Irony, the verbal weapon of the weak.~
 == EhlastJ ~Weak...strong, you change your mind faster than a male.~
