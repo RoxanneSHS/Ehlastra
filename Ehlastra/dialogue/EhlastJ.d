@@ -408,3 +408,20 @@ DO ~SetGlobal("HGSLV01NeeraToB1","Locals",1)~
 == BNEERA25 ~I like the way you think. That not-being-pawn-in-a-game drift of it.~
 == EhlastJ ~I was slave for a while. It will not happen again.~
 EXIT
+
+CHAIN
+IF ~InParty("HGSLV01")
+See("HGSLV01")
+InParty(Myself)
+!StateCheck("HGSLV01",CD_STATE_NOTVALID)
+!StateCheck("Viconia",CD_STATE_NOTVALID)
+Global("O#BranViconiaToB1","GLOBAL",0)~ THEN BVICON25 EhlViconiaToB
+~I considered you weak because you were slave to a male. I have come to change my mind by now.~
+DO ~SetGlobal("O#BranViconiaToB1","GLOBAL",1)~
+== EhlastJ ~I have been waiting for that moment eagerly, drow. Your opinion is utterly important to me, thank you for sharing it.~
+== BVICON25 ~I have been long enough on the damned surface to know this tone. Irony, the verbal weapon of the weak.~
+== EhlastJ ~Weak...strong, you change your mind faster than a male.~
+== BVICON25 ~You have your worth in battle but none in conversation.~
+== EhlastJ ~Let us talk about axes and swords. In case you know anything about them. Males are beyond your horizon, drow.~
+== BVICON25 ~Fine. How about poisoned weapons. Tongues come to my mind.~
+EXIT
