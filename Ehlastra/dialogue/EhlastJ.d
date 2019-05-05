@@ -417,7 +417,7 @@ InParty(Myself)
 !StateCheck("Viconia",CD_STATE_NOTVALID)
 Global("EhlaViconiaToB","Locals",0)~ THEN BVICON25 EhlViconiaToB
 ~I considered you weak because you were slave to a male. I have come to change my mind by now.~
-DO ~SetGlobal("EhlaNViconiaToB","Locals",1)~
+DO ~SetGlobal("EhlaViconiaToB","Locals",1)~
 == EhlastJ ~I have been waiting for that moment eagerly, drow. Your opinion is utterly important to me, thank you for sharing it.~
 == BVICON25 ~I have been long enough on the damned surface to know this tone. Irony, the verbal weapon of the weak.~
 == EhlastJ ~Weak...strong, you change your mind faster than a male.~
