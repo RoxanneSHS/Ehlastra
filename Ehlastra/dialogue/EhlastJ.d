@@ -374,3 +374,37 @@ DO~SetGlobal("EhDorn","Locals",2) RealSetGlobalTimer("BanterstartTimer","Locals"
 ==EhlastJ~Tempus guides me. Bloodshed is one thing that gets me excited but not the only thing.~
 ==Bdorn25~Northern women choose their mates from the winners. My patron affords me more power than you will ever consume, Ehlastra.~
 ==EhlastJ~I heard bigger promises from lesser men, Dorn. I see potential in you.~EXIT
+
+CHAIN
+IF ~InParty("HGSLV01")
+See("HGSLV01")
+InParty(Myself)
+!StateCheck("Hexxat",CD_STATE_NOTVALID)
+!StateCheck("HGSLV01",CD_STATE_NOTVALID)
+Global("EhlaHexxat","Locals",0)~ THEN BHEXXA25 EhlaHexxat1
+~All silence? I thought you'd be more tolerant towards me, Ehlastra.~
+DO ~SetGlobal("EhlaHexxat","Locals",1)~
+== EhlastJ ~I destroyed every undead I met. Letting you alive IS tolerant but you owe it to <CHARNAME> not to your own ways. I trust <PRO_HIMHER> in the choice of companions.~
+== BHEXXA25 ~Too bad. You could learn so much from my centuries of experience.~
+== EhlastJ ~One experience I really enjoy is when I drive a stake through a vampire's heart and the flesh turns to dust and dissolves.~
+== BHEXXA25 ~You're disgusting.~
+== EhlastJ ~You are welcome.~
+EXIT
+
+CHAIN
+IF ~InParty("HGSLV01")
+See("HGSLV01")
+InParty(Myself)
+!StateCheck("Neera",CD_STATE_NOTVALID)
+!StateCheck("HGSLV01",CD_STATE_NOTVALID)
+Global("HGSLV01NeeraToB1","Locals",0)~ THEN BNEERA25 ehlNeeraToB1
+~I'm bored.~
+DO ~SetGlobal("HGSLV01NeeraToB1","Locals",1)~
+== EhlastJ ~By the icicles of Auril, how come? A bhaalspawn war is raging in Tethir and the multiverse is trying to kill us - how boring.~
+== BNEERA25 ~Aren't you northerners supposed to respect old prophecies and cryptic messengers?~
+== EhlastJ ~Not when it is my own and my friends' lives on the stake, Neera. In the current case I see a good chance that it may be us who finally write the definite version of this prophecy.~
+== BNEERA25 ~You believe we have the power to do that?~
+== EhlastJ ~You summon your wild spells, I throw my axe, and we teach that Solar an that Lady Melissan a lesson.~
+== BNEERA25 ~I like the way you think. That not-being-pawn-in-a-game drift of it.~
+== EhlastJ ~I was slave for a while. It will not happen again.~
+EXIT
