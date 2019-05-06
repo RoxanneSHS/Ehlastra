@@ -310,6 +310,24 @@ IF~~THEN EhlastJ JoinBalth6
 =~Let us move on.~EXIT
 
 CHAIN
+IF~Global("HG_FaceBalth","Global",6)~ THEN EhlastJ Bonside1
+~This was the honorable thing to do, <CHARNAME>. Bhaal will stay dead and Melissan will be punished for what she had started.~
+DO~SetGlobal("HG_FaceBalth","Global",7)~
+END
+++~I feel good about it too, Ehlastra. Balthazar is quite different from the other spawns.~+ Bonside2
+++~Thank you for your encouragement. I had my doubts but you dispelled them.~ + Bonside2
+++~Yes, I tricked him fine. He may believe he has fooled me but my dagger is ready.~+ Bonside3
+
+CHAIN
+IF~~THEN EhlastJ Bonside2
+~Yes, you and him are closer than any of your other siblings. His sacrifice by your hand or by his own would only have strengthened the enemy.~EXIT
+
+CHAIN
+IF~~THEN EhlastJ Bonside3
+~Be no fool, <CHARNAME>. And be no traitor. He will keep his word and you better keep yours.~
+=~You and him are closer than any of your other siblings. His sacrifice by your hand or by his own would only strengthened the enemy.~EXIT
+
+CHAIN
 IF~Global("Ehlasex","Locals",1)~THEN EhlastJ SexM1
 ~I am confident that we will succeed. The victory of this bhaalwar will be ours.~
 =~(Her voice is unmistakably lascivious.) I have a need tonight to assure the bond between us that will make us strong enough. I need you.~

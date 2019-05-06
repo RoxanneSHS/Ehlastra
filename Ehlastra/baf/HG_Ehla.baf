@@ -160,7 +160,16 @@ SetGlobal("HG_BalthLater","Global",2)
 END
 
 IF
-OR(11)
+Global("HG_FaceBalth","Global",5)
+Global("BalthazarFights","GLOBAL",1)
+!AreaCheck("ar5505")
+THEN
+RESPONSE #100
+SetGlobal("HG_FaceBalth","Global",6)
+END
+
+IF
+OR(12)
 Global("AxeIsback","Locals",1)
 Global("AxeNotback","Locals",1)
 Global("GiantCanChange","Locals",1)
@@ -171,6 +180,7 @@ Global("BanterStart","Locals",1)
 Global("HG_FaceBalth","Global",2)
 Global("TalkofPast","Locals",5)
 Global("HG_FaceBalth","Global",4)
+Global("HG_FaceBalth","Global",6)
 Global("HG_BalthLater","Global",2)
 InParty(Myself)
 !See([ENEMY])
@@ -257,4 +267,25 @@ CombatCounter(0)
 THEN
 RESPONSE #100
 StartDialogNoSet("EhlastJ")
+END
+
+IF
+Global("BalthazarFights","GLOBAL",0)
+Global("DMWWBalthInGrove","GLOBAL",1)
+InMyArea("Balth")
+Allegiance("Balth",ENEMY)
+InParty(Myself)
+THEN
+RESPONSE #100
+StartCutSceneMode()
+DisplayStringHead(Myself,@013)
+Wait(2)
+LeaveParty()
+ChangeAIScript("Gpmerc",DEFAULT)
+Wait(2)
+ReallyForceSpellRES("HG_CHAN","HGSLV01")
+Wait(1)
+Enemy()
+EndCutSceneMode()
+AttackReevaluate(LastSeenBy(Myself),45)
 END
