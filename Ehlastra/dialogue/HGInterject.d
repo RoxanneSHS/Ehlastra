@@ -41,7 +41,7 @@ END
 
 INTERJECT Bazmonk 14 HG_FaceAbiMonk
 ==EhlastJ IF~InParty("HGSLV01")~THEN~You were sent to negotiate with Abazigal. You failed to reason with him just like his other emissaries did.~
-==Bazmonk IF~InParty("HGSLV01")~THEN~How would you know such a thing even if it were true?~
+==Bazmonk IF~InParty("HGSLV01")~THEN~How would you know such a thing *cough* even if it were true?~
 ==EhlastJ IF~InParty("HGSLV01")~THEN~I saw your monk "brother" killed, the one he sent to Yaga-Shura.~
 END 
 ++~I wonder why Balthazar did not send anyone to negotiate with me, or did he?~ +3
