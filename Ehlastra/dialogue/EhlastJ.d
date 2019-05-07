@@ -73,7 +73,7 @@ IF~~THEN EhlastJ KnowMel2
 ~What is the meaning of this?~
 END
 ++~A mysterious warning I already heard. I'm not sure if it's the same person meant though.~+ KnowMel3
-++~Oh, I was just thinking out loud. Nevermind.~+ KnowMel3
+++~Oh, I was just thinking out loud. Never mind.~+ KnowMel3
 
 CHAIN
 IF~~THEN EhlastJ KnowMel3
@@ -98,7 +98,7 @@ IF~~THEN EhlastJ Northpast3
 =~Peace treaties were negotiated and one of those weak elders' wonderful ideas was that the contracts be sealed by a marriage between the one chieftain's son with the other one's daughter.~
 END
 ++~I think I see where that leads us.~ + Northpast4
-++~I heard enough to know that it doesn't interest me anymore.~ + Northpast2
+++~I heard enough to know that it doesn't interest me any more.~ + Northpast2
 ++~The daughter involved probably was named Ehlastra.~ + Northpast4
 
 CHAIN
@@ -108,7 +108,7 @@ END
 ++~Sometimes the pride of one counts less than the life of many.~ + Northpast5
 ++~Did they ask your opinion on the case - or his?~ + Northpast5
 IF~Gender(Player1,FEMALE)~THEN REPLY~I would never let myself be treated like this!~+ Northpast5
-++~I heard enough to know that it doesn't interest me anymore.~ + Northpast2
+++~I heard enough to know that it doesn't interest me any more.~ + Northpast2
 ++~Political marriages are not uncommon among the children of rulers.~ + Northpast5
 
 CHAIN
@@ -159,7 +159,7 @@ IF~~THEN Sarev25J Northpast25
 
 CHAIN
 IF~~THEN EhlastJ Northpast26
-~His advisors did not trust me, a mage named Winski and a priestess Tamoko. Sarevok was nervous because someone he called Gorion's Ward had crossed his plans several times.~
+~His advisers did not trust me, a mage named Winski and a priestess Tamoko. Sarevok was nervous because someone he called Gorion's Ward had crossed his plans several times.~
 =~Enough for now. We may talk about my past another time again.~EXIT
 
 CHAIN
@@ -212,7 +212,7 @@ DO~SetGlobal("TalkofPast","Locals",6) ~
 END
 ++ ~I start to enjoy it. It means my victory - and my ascension.~ + Inevi1
 ++ ~It has to be endured because after this, I'll be free.~ + Inevi2
-++ ~No. I feel like a pawn in somebod's game.~ + Inevi3
+++ ~No. I feel like a pawn in somebody's game.~ + Inevi3
 ++ ~It was inevitable. Alaundo predicted these events, you know.~ + Inevi3
 ++ ~Let's talk later.~ + Inevi4
 
@@ -311,7 +311,7 @@ IF~~THEN EhlastJ JoinBalth6
 
 CHAIN
 IF~Global("HG_FaceBalth","Global",6)~ THEN EhlastJ Bonside1
-~This was the honorable thing to do, <CHARNAME>. Bhaal will stay dead and Melissan will be punished for what she had started.~
+~This was the honourable thing to do, <CHARNAME>. Bhaal will stay dead and Melissan will be punished for what she had started.~
 DO~SetGlobal("HG_FaceBalth","Global",7)~
 END
 ++~I feel good about it too, Ehlastra. Balthazar is quite different from the other spawns.~+ Bonside2
@@ -367,7 +367,7 @@ IF~Global("EhEdwin","Locals",1)~ THEN EhlastJ Edibanter
 ~Where is Thay?~
 DO~SetGlobal("EhEdwin","Locals",2) RealSetGlobalTimer("BanterstartTimer","Locals",1800)~
 ==Bedwin25~At the very centre of the multiverse, as every simian would know.~
-==EhlastJ~I see. It must be very small then to fit between the lands of the Elk tribe babarians and the realms of the goblins in the Evermoors. All of them claim to be at the centre of the multiverse. Not to forget all the egomaniacs who think of themselves as our masters.~
+==EhlastJ~I see. It must be very small then to fit between the lands of the Elk tribe barbarians and the realms of the goblins in the Evermoors. All of them claim to be at the centre of the multiverse. Not to forget all the egomaniacs who think of themselves as our masters.~
 ==Bedwin25~Did your master even allow you to talk to a superior like me?~
 ==EhlastJ~<PRO_HESHE> obviously forgot. <PRO_HESHE> as well forgot to order me not to use my berserker rage against red-robed imposters.~
 ==Bedwin25~Bark at the moon, wolf child.~DO~RunAwayFrom("HGSLV01",40)~EXIT
@@ -386,7 +386,7 @@ DO~SetGlobal("EhSarevok","Locals",2) RealSetGlobalTimer("BanterstartTimer","Loca
 
 CHAIN
 IF~Global("EhDorn","Locals",1)~ THEN EhlastJ Dorbanter
-~You are a slave to your bloodlust with an insatiable urge to kill. Do you not sometimes feel the need for something else?~
+~You are a slave to your blood lust with an insatiable urge to kill. Do you not sometimes feel the need for something else?~
 DO~SetGlobal("EhDorn","Locals",2) RealSetGlobalTimer("BanterstartTimer","Locals",1800)~
 ==Bdorn25~I'm sure <CHARNAME> will give us ample opportunity to shed blood by the bucketful. I can see that the thought of it makes you breathe harder in anticipation of the joy.~
 ==EhlastJ~Tempus guides me. Bloodshed is one thing that gets me excited but not the only thing.~

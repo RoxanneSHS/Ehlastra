@@ -19,7 +19,7 @@ IF~~THEN REPLY~I see no point to take with me one so weak to get captured this w
 END
 
 IF~~THEN BEGIN join3
-SAY~You are a fool to expect me to wait. I shall return to the North as the sulfur stench of these lands galls me! From there I will hear the tales of your downfall with pleasure. You will fall just like the Five will fall but I will live.~ 
+SAY~You are a fool to expect me to wait. I shall return to the North as the sulphur stench of these lands galls me! From there I will hear the tales of your downfall with pleasure. You will fall just like the Five will fall but I will live.~ 
 IF~~THEN DO~EscapeArea()~EXIT
 END
 END
