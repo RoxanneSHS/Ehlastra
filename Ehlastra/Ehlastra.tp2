@@ -1,7 +1,7 @@
 BACKUP ~Ehlastra/backup~
 AUTHOR ~Roxanne - https://baldursextendedworld.com/Tamoko/ or roxanne@baldursextendedworld.com~
 
-VERSION ~v0.1~
+VERSION ~v0.2~
 AUTO_TRA ~Ehlastra/Tra/%s~
 
 LANGUAGE ~English~ ~english~ ~Ehlastra/Tra/Setup-Ehlastra.tra~
@@ -23,8 +23,6 @@ LAUNCH_PATCH_FUNCTION ADD_CRE_EFFECT
     target = 1 //Self
     resist_dispel = 0 //Not dispellable + bypass resistance
   END
-
-//ADD_JOURNAL @1002 @1003 @1004 @1011 USING ~Ehlastra/Tra/Setup-Ehlastra.tra~
 
 COMPILE ~Ehlastra/baf/HG_Ehla.baf~
 COMPILE ~Ehlastra/baf/EhlastD.baf~
