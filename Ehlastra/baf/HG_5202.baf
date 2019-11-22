@@ -7,6 +7,6 @@ InParty("HGSLV01")
 THEN
 RESPONSE #100
 SetGlobal("HG_Changehere","ar5202",1)
-ReallyForceSpellRES("HG_CHAN","HGSLV01")
 SetGlobal("HG_isgia","Global",1)
+ActionOverride("HGSLV01",Polymorph(GIANT_FIRE))
 END
