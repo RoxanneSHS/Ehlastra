@@ -1,0 +1,12 @@
+IF
+OR(2)
+Global("HG_FaceNyale2","GLOBAL",1)
+Global("HG_FaceNyale1","GLOBAL",1)
+Global("HG_Changehere","ar5202",0)
+InParty("HGSLV01")
+THEN
+RESPONSE #100
+SetGlobal("HG_Changehere","ar5202",1)
+ReallyForceSpellRES("HG_CHAN","HGSLV01")
+SetGlobal("HG_isgia","Global",1)
+END

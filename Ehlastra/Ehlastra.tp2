@@ -1,7 +1,7 @@
 BACKUP ~Ehlastra/backup~
 AUTHOR ~Roxanne - https://baldursextendedworld.com/Tamoko/ or roxanne@baldursextendedworld.com~
 
-VERSION ~v0.2~
+VERSION ~v0.3~
 AUTO_TRA ~Ehlastra/Tra/%s~
 
 LANGUAGE ~English~ ~english~ ~Ehlastra/Tra/Setup-Ehlastra.tra~
@@ -55,6 +55,7 @@ COPY ~Ehlastra/Misc//HG_Chan.SPL~ ~override~
      SAY 0x50 @010
 
 EXTEND_TOP ~ar5204.bcs~ ~Ehlastra/baf/HG_5204.baf~
+EXTEND_TOP ~ar5202.bcs~ ~Ehlastra/baf/HG_5202.baf~
 EXTEND_TOP ~yaga01.bcs~ ~Ehlastra/baf/HG_Axe5.baf~
 EXTEND_TOP ~finmel01.bcs~ ~Ehlastra/baf/HG_Axe5.baf~
 EXTEND_TOP ~abaz2.bcs~ ~Ehlastra/baf/HG_Axe5.baf~

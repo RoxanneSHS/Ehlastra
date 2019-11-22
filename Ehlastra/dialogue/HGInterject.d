@@ -4,7 +4,7 @@ INTERJECT HGNYA01 1  HG_FaceNyale1
 ==HGNYA01 IF~InParty("HGSLV01")~THEN~Listen not to her, powerful one.~
 END HGNYA01 3
 
-I_C_T2  HGNYA01 25 HG_FaceNyale2
+I_C_T  HGNYA01 25 HG_FaceNyale2
 ==HGNYA01 IF~InParty("HGSLV01")Global("HG_FaceNyale1","Global",0)~THEN~(A bony finger points at Ehlastra.) You go back to be pet for my boy, silly, you not be here with the other bhaalchild.~
 ==EhlastJ IF~InParty("HGSLV01")Global("HG_FaceNyale1","Global",0)~THEN~You have any reason to fear me, Nyalee, Witch of the Glade. But I am free of the chains and I will use the dark power you worked on me against you and your boy now.~ DO~ReallyForceSpellRES("HG_CHAN","HGSLV01")~
 ==HGNYA01 IF~InParty("HGSLV01")Global("HG_FaceNyale1","Global",0)~THEN~Listen not to her, powerful one.~
