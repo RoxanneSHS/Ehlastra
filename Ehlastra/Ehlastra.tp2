@@ -1,10 +1,11 @@
 BACKUP ~Ehlastra/backup~
 AUTHOR ~Roxanne - https://baldursextendedworld.com/Tamoko/ or roxanne@baldursextendedworld.com~
 
-VERSION ~v0.3~
+VERSION ~v0.4~
 AUTO_TRA ~Ehlastra/Tra/%s~
 
-LANGUAGE ~English~ ~english~ ~Ehlastra/Tra/Setup-Ehlastra.tra~
+LANGUAGE ~English~ ~english~ ~Ehlastra/Tra/English/Setup-Ehlastra.tra~
+LANGUAGE ~Russian~ ~russian~ ~Ehlastra/Tra/Russian/Setup-Ehlastra.tra~
 
 BEGIN ~Ehlastra ToB~
 REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ @002
@@ -80,5 +81,5 @@ ACTION_IF FILE_EXISTS_IN_GAME ~dw#melis.cre~ THEN BEGIN
 COPY ~Ehlastra/Mod/WheelsInterject.d~  ~Ehlastra/Mod/WheelsInterject.d~
 REPLACE_TEXTUALLY ~1113~ ~%actual_confront_state%~
 COMPILE ~Ehlastra/Mod/WheelsInterject.d~
-END
+END 
 

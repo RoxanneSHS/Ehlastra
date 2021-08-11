@@ -1,0 +1,42 @@
+@001 =~Ehlastra~
+@002 =~This mod requires BG2EE or EET~
+@003 =~Your instincts are not wrong - I am a veteran warrior of many battles. But I have no reason to stay in this land. I will return to my northern home unless...You are powerful, let us see where this talk will lead us.~
+@004 =~I know of a name from Yaga-Shura's past - Nyalee, an old crone who lives in the marshes of the Forest of Mir. She knows Yaga-Shura's secrets. I owe her a bloody revenge for what she did to me.~
+@005 =~Ehlastra is proud of her heritage and past even though it had led her to enslavement by the fire giant Yaga-Shura. She left her tribe in the north when she became aware that she was to be married off to another tribe's chieftain, a man she had once defeated in battle, to serve as his wife and pledge for peace. 
+
+Always a loner she followed the allure of large power and bloodshed she heard about from Tethir. She wanted to join one of the powerful bhaalspawns, and she would prefer the winner. Fate let her meet the wrong one, Yaga-Shura, who had other plans for her. With the help of his "mother" Nyalee he wanted to turn her into the mother of his offspring. Nyalee's magical manipulation allow Ehlastra to shape shift into a fire giantess for a time.
+
+When <CHARNAME> freed her from her enslavement she took the chance to join with a bhaalspawn again. This time her hope was that it was one to overpower her capturer and the Five.~
+@006 =~Throwing Axe~
+@007 =~Ehlastra's Slasher~
+@008 =~This axe was forged somewhere in the north for the berserker warrior Ehlastra, it is a weapon of immense power in her hand.  
+
+STATISTICS:
+
+Equipped abilities:
+– Strength set to 25
+
+Combat abilities:
+- Instant Slaying of Ogres
+– Returns to the wielder's hand when thrown
+
+THACO: +5
+Damage (melee): 1d6+3 slashing, +2 extra cold damage
+Damage (thrown): 1d6+5 missile, +2 extra cold damage
+Speed Factor: 2
+Proficiency Type: Axe
+Type: One-handed
+Requires:
+ 14 Strength
+
+Weight: 30~
+@009 =~Fire Giantess~
+@010 =~Shape change to Fire Giant for 90 seconds~
+@011 =~Her time with <CHARNAME> and Balthazar had given Ehlastra a new perspective. She joint Balthazar when he returned to his monastery and drove out the remaining criminal elements, making the outpost safe for new settlers and merchants. As the years passed, Amkethran became the jewel of Tethyr, renowned for its cultural richness and the serenity it offered. Ehlastra was instrumental in creating the Monastic Guard in Balthazar's name, an elite group of fighters, paladins and monks sworn to protect the common folk from tyranny.
+
+The private life of the inseparable couple was much rumoured about but little is known.~
+@012 =~Her time with <CHARNAME> had given Ehlastra a new perspective. She returned to Balthazar's monastery and drove out the remaining criminal elements, making the outpost safe for new settlers and merchants. As the years passed, Amkethran became the jewel of Tethyr, renowned for its cultural richness and the serenity it offered. Ehlastra was instrumental in creating the Monastic Guard in Balthazar's memory, an elite group of fighters, paladins and monks sworn to protect the common folk from tyranny.~
+@013 =~TRAITOR! You will not dishonour me!~
+
+
+
