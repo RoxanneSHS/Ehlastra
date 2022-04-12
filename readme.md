@@ -25,7 +25,7 @@ Notes:
 
 - She is an evil NPC by original design but she fits into any party. In ToB there is no distinction between good or evil decisions in the main plot that can affect your companions very much - it is more the personal burden of the protagonist how to deal with the heritage of Bhaal. And Ehlastra does care very little about that because whatever you do it will be bloody, dangerous and destructive - and destroy the Five and Melissan.
 
--  this mod is not recommended if you play ToB for the first time. Some of her insider knowledge of the Five may be considered spoiler for those completely unprepared.)
+-  this mod is not recommended if you play ToB for the first time. (Some of her insider knowledge of the Five may be considered spoiler for those completely unprepared.)
 <br>
 &nbsp;</span></p>
 
