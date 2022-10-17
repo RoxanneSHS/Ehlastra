@@ -1,7 +1,7 @@
 BACKUP ~Ehlastra/backup~
-AUTHOR ~Roxanne - https://baldursextendedworld.com/Tamoko/ or roxanne@baldursextendedworld.com~
+AUTHOR ~https://github.com/RoxanneSHS/Ehlastra~
 
-VERSION ~v0.4~
+VERSION ~v0.5~
 AUTO_TRA ~Ehlastra/Tra/%s~
 
 LANGUAGE ~English~ ~english~ ~Ehlastra/Tra/English/Setup-Ehlastra.tra~

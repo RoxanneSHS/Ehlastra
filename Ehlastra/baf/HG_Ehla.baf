@@ -19,6 +19,15 @@ AddXPObject(Myself,3000000)
 END
 
 IF
+Global("HG_EhlaJoin","GLOBAL",1)
+Global("Dialoguefix","Locals",0)
+THEN
+RESPONSE #100
+SetGlobal("Dialoguefix","Locals",1)	
+SetDialogue("EhlastJ")
+END
+
+IF
 Global("HG_isGia","Global",1)
 THEN
 RESPONSE #100
