@@ -31,7 +31,7 @@ COMPILE ~Ehlastra/baf/EhlastD.baf~
 COMPILE ~Ehlastra/dialogue~
 
 APPEND ~pdialog.2da~
-~HGSLV01 *** *** *** EhlastP EhlastJ EhlastD~
+~HGSLV01 *** EhlastJ *** EhlastP EhlastJ EhlastD~
 UNLESS ~HGSLV01~
 
 APPEND ~interdia.2da~
