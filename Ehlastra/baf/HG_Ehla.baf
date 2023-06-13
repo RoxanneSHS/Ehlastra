@@ -32,14 +32,14 @@ Global("HG_isGia","Global",1)
 THEN
 RESPONSE #100
 SetGlobal("HG_isGia","Global",2)
-RealSetGlobalTimer("HG_backnormal","Locals",90)
+SetGlobalTimer("HG_backnormal","Locals",90)
 Wait(1)
 Polymorph(GIANT_FIRE)
 END
 
 IF
 Global("HG_isGia","Global",2)
-RealGlobalTimerExpired("HG_backnormal","Locals")
+GlobalTimerExpired("HG_backnormal","Locals")
 THEN
 RESPONSE #100
 SetGlobal("HG_isGia","Global",0)
