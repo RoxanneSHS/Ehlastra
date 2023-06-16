@@ -1,7 +1,7 @@
 BACKUP ~Ehlastra/backup~
 AUTHOR ~https://github.com/RoxanneSHS/Ehlastra~
 
-VERSION ~v0.5~
+VERSION ~v0.6~
 AUTO_TRA ~Ehlastra/Tra/%s~
 
 LANGUAGE ~English~ ~english~ ~Ehlastra/Tra/English/Setup-Ehlastra.tra~
