@@ -6,6 +6,7 @@ AUTO_TRA ~Ehlastra/Tra/%s~
 
 LANGUAGE ~English~ ~english~ ~Ehlastra/Tra/English/Setup-Ehlastra.tra~
 LANGUAGE ~Russian~ ~russian~ ~Ehlastra/Tra/Russian/Setup-Ehlastra.tra~
+LANGUAGE ~Schinese~ ~schinese~ ~Ehlastra/Tra/schinese/Setup-Ehlastra.tra~
 
 BEGIN ~Ehlastra ToB~
 REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ @002
@@ -77,7 +78,8 @@ EXTEND_BOTTOM ~ar4000.bcs~ ~Ehlastra/mod/HG_4500.baf~
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~dw#melis.cre~ THEN BEGIN
-	OUTER_SET actual_confront_state = (STATE_WHICH_SAYS 0 IN ~wheels/tra/%s/balthadd.tra~ FROM ~balth~)
+	OUTER_SET actual_confront_state = (STATE_WHICH_SAYS 0 IN ~wheels/lang/%s/balthadd.tra~ FROM ~balth~)
+
 COPY ~Ehlastra/Mod/WheelsInterject.d~  ~Ehlastra/Mod/WheelsInterject.d~
 REPLACE_TEXTUALLY ~1113~ ~%actual_confront_state%~
 COMPILE ~Ehlastra/Mod/WheelsInterject.d~
